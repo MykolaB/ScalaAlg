@@ -1,0 +1,10 @@
+#################
+## Eclipse
+#################
+
+target/
+project/project/target
+project/target
+out/
+ScalaAlg.iws
+.idea/workspace.xml
