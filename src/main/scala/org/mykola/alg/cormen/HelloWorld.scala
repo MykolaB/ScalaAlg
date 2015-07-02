@@ -5,6 +5,6 @@ package org.mykola.alg.cormen
  */
 object HelloWorld {
   def main (args: Array[String]) {
-    println("Hello World!!!");
+    println("Hello World!!!!");
   }
 }
