@@ -8,17 +8,22 @@ import math.pow
  */
 object NewtonSquareRoot {
 
-  def sqrtIter(guess: Double, x: Double): Double =
-    if (isGoodEnough(guess, x)) guess
-    else sqrtIter(improve(guess, x), x)
+  def sqrt(x: Double) = {
+    def sqrtIter(guess: Double): Double = {
+      if (isGoodEnough(guess)) guess
+      else sqrtIter(improve(guess))
+    }
+    def improve(guess: Double): Double = (guess + x / guess) / 2
+    def isGoodEnough(guess: Double): Boolean = abs(pow(guess, 2) - x) < 0.001
 
-  private def improve(guess: Double, x: Double): Double = (guess + x / guess) / 2
-  private def isGoodEnough(guess: Double, x: Double): Boolean = abs(pow(guess, 2) - x) < 0.001
+    sqrtIter(1.0)
+  }
+
 }
 
 object Calc {
   def main(args: Array[String]) {
-    println(NewtonSquareRoot.sqrtIter(3, 0.00001))
-    println(NewtonSquareRoot.sqrtIter(0.0000001, 0.00001))
+    println(NewtonSquareRoot.sqrt(0.00001))
+    println(NewtonSquareRoot.sqrt(1000000000))
   }
 }
