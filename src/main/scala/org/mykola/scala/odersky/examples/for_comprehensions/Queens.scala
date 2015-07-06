@@ -29,6 +29,5 @@ object Queens {
   def main(args: Array[String]) {
     val res = List.range(1, 13).map(x => (x, queens(x).size))
     println(res)
-    //println(isSafe(3, List(4), 1))
   }
 }
