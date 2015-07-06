@@ -11,6 +11,6 @@ object PrimePairs {
   }
 
   def main(args: Array[String]) {
-    println(produce(23))
+    println(produce(11))
   }
 }
