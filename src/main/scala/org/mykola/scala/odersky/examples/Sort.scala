@@ -19,6 +19,6 @@ object QuickSort {
 
 object Sorter {
   def main(args: Array[String]) {
-    println(QuickSort.sort(Array(4,7,2,89,0,189)).deep.mkString(","));
+    println(QuickSort.sort(Array(4,7,2,89,0,189)).mkString(","));
   }
 }
