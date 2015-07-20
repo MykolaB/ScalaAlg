@@ -31,6 +31,6 @@ object Test {
     else m.add(xs.head, sum(xs.tail)(m))
 
   def main(args: Array[String]) {
-    println (sum(List("a", "bc", "def")))
+    //println (sum(List("a", "bc", "def")))
   }
 }

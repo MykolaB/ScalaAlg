@@ -10,6 +10,6 @@ case class TypeScheme(tyvars: List[Tyvar], tpe: Type) {
   }
 
   def newInstance: Type = {
-    (emptySubst /: tyvars) ((s, tv) => s.extend(tv, new Tyvar())) (tpe)
+    (emptySubst /: tyvars) ((s, tv) => s.extend(tv, new Tyvar("hi"))) (tpe)
   }
 }
